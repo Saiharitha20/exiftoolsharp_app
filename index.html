@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processor and Organizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        #output {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: monospace;
+            background-color: white;
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Processor and Organizer</h1>
+    
+    <h2>Image Processing</h2>
+    <button id="processImages">Select Folder and Process Images</button>
+    
+    <h2>Photo Organizer</h2>
+    <div>
+        <label for="csvFile">Select CSV File:</label>
+        <input type="file" id="csvFile" accept=".csv">
+    </div>
+    <div>
+        <label for="photoFolder">Select Photo Folder:</label>
+        <input type="file" id="photoFolder" webkitdirectory directory>
+    </div>
+    <button id="processButton">Organize Photos</button>
+    
+    <div id="output"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

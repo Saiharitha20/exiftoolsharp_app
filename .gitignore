@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+#electron forge
+out/
+exiftool.js
+resize.js
+
